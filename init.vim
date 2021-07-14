@@ -33,3 +33,30 @@ set undofile
 " Add a column on the left side for messages (linting/git messages etc. Need
 " plugins)
 set signcolumn=yes
+
+" Color scheme
+set background=dark
+autocmd vimenter * ++nested colorscheme solarized8
+
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+" Some fuzzy searching thingy
+Plug 'nvim-telescope/telescope.nvim'
+
+" Solarized theme
+Plug 'lifepillar/vim-solarized8'
+
+" Language server
+Plug 'neovim/nvim-lspconfig'
+
+" Undo visualizer
+Plug 'mbbill/undotree'
+
+" " Initialize plugin system
+call plug#end()
