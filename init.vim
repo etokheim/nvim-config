@@ -1,6 +1,5 @@
 " General
 set autoindent
-set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set smartindent
@@ -19,7 +18,7 @@ set exrc
 
 " Show the relative line number, and display the current line number on the
 " active line
-set relativenumber
+" set relativenumber
 set nu
 
 " If you search with a captial letter, the search will be case sensitive, if
@@ -60,3 +59,6 @@ Plug 'mbbill/undotree'
 
 " " Initialize plugin system
 call plug#end()
+
+set noexpandtab
+autocmd FileType python setlocal noexpandtab
