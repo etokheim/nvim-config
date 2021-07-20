@@ -18,7 +18,7 @@ set exrc
 
 " Show the relative line number, and display the current line number on the
 " active line
-" set relativenumber
+set relativenumber
 set nu
 
 " If you search with a captial letter, the search will be case sensitive, if
