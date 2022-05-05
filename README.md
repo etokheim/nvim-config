@@ -4,7 +4,7 @@ There are two ways to go. Configure manually or using the automated script. The 
 **The manual alternative will currently install an old version of neovim. > 0.6 is required! Use the script, or another package manager.**
 
 ## Automatic install
-Open the [Auto install neovim](https://github.com/etokheim/auto-install-neovim-for-pi) repository and follow the instructions.
+Open the [Auto build and install neovim](https://github.com/etokheim/auto-build-and-install-neovim) repository and follow the instructions.
 
 ## Manual install
 1. Install neovim: `sudo apt install neovim`
