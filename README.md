@@ -15,4 +15,9 @@ Open the [Auto build and install neovim](https://github.com/etokheim/auto-build-
    - Configuration file should be saved at `~/.config/nvim/init.vim`
 6. Open neovim: `nvim`
 7. Ignore errors and install plugins: `:PlugInstall`
+8. If you are on Windows and want to use the native clipboard for Neovim, you have to install Neovim on Windows as well, and then add the path to the install folder to this variable ´$NEOVIM_WIN_DIR´. After that, add that variable + bin to your path, like this:
+   - ´´´sh
+   export $NEOVIM_WIN_DIR=/mnt/c/Users/[user]/Documents/Apps/Neovim
+   export $PATH:$NEOVIM_WIN_DIR/bin
+   ´´´
 
