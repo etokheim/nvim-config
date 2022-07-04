@@ -1,6 +1,18 @@
 " Big thanks to:
 " https://medium.com/geekculture/neovim-configuration-for-beginners-b2116dbbde84
 
+" Identify platforms
+" Kudos to: https://gist.github.com/novaez/11119169
+silent function! OSX()
+    return has('macunix')
+endfunction
+silent function! LINUX()
+    return has('unix') && !has('macunix') && !has('win32unix')
+endfunction
+silent function! WINDOWS()
+    return  (has('win16') || has('win32') || has('win64'))
+endfunction
+
 " General
 " Use :help [property] for more info
 set autoindent				" Indents any new lines to the same level as the previous line
@@ -17,21 +29,23 @@ set syntax=on				" Enables syntax highlighting
 " set clipboard=unnamedplus
 set clipboard+=unnamedplus
 
-" Use Windows' native clipboard
+" If on windows, use Windows' native clipboard
 " Thanks to https://github.com/neovim/neovim/issues/12113
-let s:win32yank = 'win32yank.exe'
-let g:clipboard = {
-      \  'name' : 'wsl',
-      \  'copy' : {
-      \    '+' : s:win32yank..' -i --crlf',
-      \    '*' : s:win32yank..' -i --crlf',
-      \  },
-      \  'paste' : {
-      \    '+' : s:win32yank..' -o --lf',
-      \    '*' : s:win32yank..' -o --lf',
-      \  },
-      \}
-unlet s:win32yank
+if WINDOWS()
+	let s:win32yank = 'win32yank.exe'
+	let g:clipboard = {
+	      \  'name' : 'wsl',
+	      \  'copy' : {
+	      \    '+' : s:win32yank..' -i --crlf',
+	      \    '*' : s:win32yank..' -i --crlf',
+	      \  },
+	      \  'paste' : {
+	      \    '+' : s:win32yank..' -o --lf',
+	      \    '*' : s:win32yank..' -o --lf',
+	      \  },
+	      \}
+	unlet s:win32yank
+endif
 
 " Display hidden characters (and the like)
 set list
