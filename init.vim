@@ -47,6 +47,10 @@ if WINDOWS()
 	unlet s:win32yank
 endif
 
+if exists('g:vscode')
+	source $HOME/.config/nvim/vscode/settings.vim
+endif
+
 " Display hidden characters (and the like)
 set list
 set listchars=tab:→\ ,space:·,eol:¬,trail:~
