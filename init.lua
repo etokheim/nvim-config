@@ -1,3 +1,7 @@
+-- Credits to a lot of great resources online - especially:
+-- --- LunarVim (https://github.com/LunarVim/Neovim-from-scratch)
+-- --- ThePrimeagen (https://www.youtube.com/watch?v=x2QJYq4IX6M)
+
 require 'user.settings'
 require 'user.keymaps'
 require 'user.plugins'
