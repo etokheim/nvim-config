@@ -11,7 +11,6 @@ local options = {
 	mouse = 'a',						-- Enables mouse clicks
 	syntax = 'on',					-- Enables syntax highlighting
 	clipboard = 'unnamedplus',			-- Makes Neovim use the system's clipboard, so you can copy/paste from Neovim. A workaround is required for Windows
-
 	list = true,-- Display hidden characters (and the like)
 	listchars = "tab:→ ,space:·,eol:¬,trail:~",
 	exrc = true, -- Auto source init.vim files within project directories
@@ -21,6 +20,8 @@ local options = {
 	ignorecase = true,
 	undofile = true, -- Keep undo history
 	signcolumn = 'yes', -- Add a column on the left side for messages (linting/git messages etc. Need plugins)
+	expandtab = false,  -- Use tabs instead of spaces
+	showmatch = true, -- Highlights the matching parentheses for a second after	it's created ({[]})
 }
 
 
