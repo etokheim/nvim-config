@@ -1,3 +1,5 @@
+⚠️⚠️ This is a work in progress, and won't work properly at the moment ⚠️⚠️
+
 # How to:
 There are two ways to go. Configure manually or using the automated script. The automated script will compile and install the latest version of neovim, configure it and install plugins.
 
